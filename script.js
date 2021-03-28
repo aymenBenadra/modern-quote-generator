@@ -66,7 +66,7 @@ const getQuote = async () => {
 const tweetQuote = () => {
   const quote = quoteText.textContent;
   const author = quoteAuthor.textContent;
-  const twitterUrl = `https://twitter.com/intent/tweet?text=${quote} ~${author}`;
+  const twitterUrl = `https://twitter.com/intent/tweet?text=${quote}+~${author}`;
 
   window.open(twitterUrl, "_blank");
 };
