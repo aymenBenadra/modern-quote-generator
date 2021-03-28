@@ -33,10 +33,10 @@ const newQuote = () => {
 
   // Randomly changing the background color.
   randomIndex = getRandomInt(backgroundPatterns.length);
-  console.log(body.style.backgroundImage);
+  //console.log(body.style.backgroundImage);
   body.style.backgroundImage =
     backgroundPatterns[randomIndex]["background image"];
-  console.log(body.style.backgroundImage);
+  //console.log(body.style.backgroundImage);
 };
 
 const getQuote = async () => {
