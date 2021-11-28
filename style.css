@@ -72,30 +72,26 @@ button:active {
   box-shadow: none;
 }
 
+.fa-twitter,
+.fa-facebook,
+.fa-linkedin,
+.fa-copy {
+  font-size: 1.5rem;
+}
 .twitter-button:hover {
   color: #38a1f3;
-}
-
-.fa-twitter {
-  font-size: 1.5rem;
 }
 
 .facebook-button:hover {
   color: #0a65aa;
 }
 
-.fa-facebook {
-  font-size: 1.5rem;
-}
-
 .linkedin-button:hover {
   color: #1c7ac2;
 }
-
-.fa-linkedin {
-  font-size: 1.5rem;
+.copy-indicator {
+  display: none;
 }
-
 /* Loader */
 .loader {
   border: 16px solid #dfdbe5;
