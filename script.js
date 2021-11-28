@@ -10,6 +10,8 @@ const twitterBtn = document.querySelector("#twitter");
 const facebookBtn = document.querySelector("#facebook");
 const linkedinBtn = document.querySelector("#linkedin");
 const newQuoteBtn = document.querySelector("#new-quote");
+const copyQuoteBtn = document.querySelector("#copy-quote");
+const indicator = document.querySelector(".copy-indicator");
 
 // Helper function to get a random int value to be used as index later.
 function getRandomInt(max) {
@@ -112,12 +114,23 @@ const linkedinShare = () => {
 
   window.open(linkedinUrl, "_blank");
 };
+// Copy the quote on Linkedin!
+const copyQuote = () => {
+  const quote = quoteText.textContent;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(quote);
+    indicator.style.display = "block";
+    setTimeout(() => {
+      indicator.style.display = "none";
+    }, 1000);
+  }
+};
 
 // Event listeners for the buttons.
 newQuoteBtn.addEventListener("click", newQuote);
 twitterBtn.addEventListener("click", tweetQuote);
 facebookBtn.addEventListener("click", facebookShare);
 linkedinBtn.addEventListener("click", linkedinShare);
-
+copyQuoteBtn.addEventListener("click", copyQuote);
 // On Load
 getQuote();
